@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BMI Calculator</string>
+
+    <!-- Header -->
+    <string name="title">คำนวณ BMI</string>
+    <string name="subtitle">กรอกน้ำหนักและส่วนสูงเพื่อตรวจดัชนีมวลกาย</string>
+
+    <!-- Input -->
+    <string name="label_weight">น้ำหนัก</string>
+    <string name="label_height">ส่วนสูง</string>
+    <string name="hint_weight">เช่น 65</string>
+    <string name="hint_height">เช่น 168</string>
+    <string name="unit_kg">กก.</string>
+    <string name="unit_cm">ซม.</string>
+    <string name="btn_calculate">คำนวณ</string>
+
+    <!-- Result -->
+    <string name="result_title">ค่า BMI ของคุณ</string>
+    <string name="bmi_placeholder">--</string>
+    <string name="bmi_unit">กก./ม.²</string>
+    <string name="category_placeholder">ยังไม่ได้คำนวณ</string>
+
+    <!-- Risk levels -->
+    <string name="bmi_underweight">น้ำหนักต่ำกว่าเกณฑ์</string>
+    <string name="bmi_normal">ปกติ</string>
+    <string name="bmi_overweight">น้ำหนักเกิน</string>
+    <string name="bmi_obese">อ้วน</string>
+
+    <!-- Legend -->
+    <string name="legend_title">เกณฑ์ BMI</string>
+    <string name="legend_note">ช่วงมาตรฐานสำหรับผู้ใหญ่ (20 ปีขึ้นไป)</string>
+    <string name="range_underweight">ต่ำกว่า 18.5</string>
+    <string name="range_normal">18.5 – 24.9</string>
+    <string name="range_overweight">25.0 – 29.9</string>
+    <string name="range_obese">30.0 ขึ้นไป</string>
+
+    <!-- Validation -->
+    <string name="error_weight_required">กรุณากรอกน้ำหนัก</string>
+    <string name="error_height_required">กรุณากรอกส่วนสูง</string>
+    <string name="error_value_invalid">กรุณากรอกค่าที่มากกว่า 0</string>
+    <string name="error_empty">กรุณากรอกน้ำหนักและส่วนสูง</string>
+    <string name="error_invalid">กรุณากรอกตัวเลขที่ถูกต้อง</string>
+    <string name="error_height_zero">ส่วนสูงต้องมากกว่า 0</string>
+</resources>
