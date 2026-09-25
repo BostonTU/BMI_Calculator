@@ -39,7 +39,7 @@
     <string name="error_weight_required">Please enter your weight</string>
     <string name="error_height_required">Please enter your height</string>
     <string name="error_value_invalid">Please enter a value greater than 0</string>
-    <string name="error_empty">error_empty</string>
-    <string name="error_invalid">error_invaild</string>
-    <string name="error_height_zero">error_height_zero</string>
+    <string name="error_empty">Please fill in both weight and height</string>
+    <string name="error_invalid">Please enter valid numbers</string>
+    <string name="error_height_zero">Height must be greater than 0</string>
 </resources>
