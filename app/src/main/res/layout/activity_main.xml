@@ -1,19 +1,390 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg_screen"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:paddingStart="@dimen/screen_padding_h"
+        android:paddingTop="@dimen/screen_padding_v"
+        android:paddingEnd="@dimen/screen_padding_h"
+        android:paddingBottom="@dimen/screen_padding_v">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_title"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_s"
+            android:text="@string/subtitle"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/text_subtitle" />
+
+        <!-- ===== Input card ===== -->
+        <LinearLayout
+            android:id="@+id/layoutInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_l"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="@dimen/card_padding">
+
+            <TextView
+                android:id="@+id/tvWeightLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/etWeight"
+                android:text="@string/label_weight"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/text_label"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_s"
+                android:addStatesFromChildren="true"
+                android:background="@drawable/bg_input"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/input_min_height"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/space_m"
+                android:paddingEnd="@dimen/space_m">
+
+                <EditText
+                    android:id="@+id/etWeight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/hint_weight"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:minHeight="@dimen/input_min_height"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="@dimen/text_input" />
+
+                <TextView
+                    android:id="@+id/tvWeightUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_s"
+                    android:text="@string/unit_kg"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_unit" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvHeightLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_m"
+                android:labelFor="@+id/etHeight"
+                android:text="@string/label_height"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/text_label"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_s"
+                android:addStatesFromChildren="true"
+                android:background="@drawable/bg_input"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/input_min_height"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/space_m"
+                android:paddingEnd="@dimen/space_m">
+
+                <EditText
+                    android:id="@+id/etHeight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/hint_height"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:minHeight="@dimen/input_min_height"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="@dimen/text_input" />
+
+                <TextView
+                    android:id="@+id/tvHeightUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_s"
+                    android:text="@string/unit_cm"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_unit" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCalculate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_l"
+                android:background="@drawable/bg_button"
+                android:minHeight="@dimen/button_min_height"
+                android:stateListAnimator="@null"
+                android:text="@string/btn_calculate"
+                android:textAllCaps="false"
+                android:textColor="@color/on_primary"
+                android:textSize="@dimen/text_button"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- ===== Result ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_m"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_result"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="@dimen/card_padding">
+
+                <TextView
+                    android:id="@+id/tvResultTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/result_title"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_result_title" />
+
+                <TextView
+                    android:id="@+id/tvBmiValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_xs"
+                    android:text="@string/bmi_placeholder"
+                    android:textColor="@color/primary_dark"
+                    android:textSize="@dimen/text_result_value"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvBmiUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bmi_unit"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_result_unit" />
+
+                <!-- Risk level chip: change text + textColor from MainActivity -->
+                <TextView
+                    android:id="@+id/tvBmiCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_m"
+                    android:background="@drawable/bg_chip"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/space_l"
+                    android:paddingTop="@dimen/space_s"
+                    android:paddingEnd="@dimen/space_l"
+                    android:paddingBottom="@dimen/space_s"
+                    android:text="@string/category_placeholder"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_category"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ===== BMI categories (reference) ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xl"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/space_xs"
+            android:paddingEnd="@dimen/space_xs">
+
+            <TextView
+                android:id="@+id/tvLegendTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/legend_title"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/text_legend_title"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvLegendNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xs"
+                android:layout_marginBottom="@dimen/space_s"
+                android:text="@string/legend_note"
+                android:textColor="@color/text_secondary"
+                android:textSize="@dimen/text_note" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/legend_row_min_height"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/dot_size"
+                    android:layout_height="@dimen/dot_size"
+                    android:background="@drawable/bg_dot"
+                    android:backgroundTint="@color/risk_underweight" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_m"
+                    android:layout_weight="1"
+                    android:text="@string/bmi_underweight"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_legend" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_s"
+                    android:text="@string/range_underweight"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_legend" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/legend_row_min_height"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/dot_size"
+                    android:layout_height="@dimen/dot_size"
+                    android:background="@drawable/bg_dot"
+                    android:backgroundTint="@color/risk_normal" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_m"
+                    android:layout_weight="1"
+                    android:text="@string/bmi_normal"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_legend" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_s"
+                    android:text="@string/range_normal"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_legend" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/legend_row_min_height"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/dot_size"
+                    android:layout_height="@dimen/dot_size"
+                    android:background="@drawable/bg_dot"
+                    android:backgroundTint="@color/risk_overweight" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_m"
+                    android:layout_weight="1"
+                    android:text="@string/bmi_overweight"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_legend" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_s"
+                    android:text="@string/range_overweight"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_legend" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/legend_row_min_height"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/dot_size"
+                    android:layout_height="@dimen/dot_size"
+                    android:background="@drawable/bg_dot"
+                    android:backgroundTint="@color/risk_obese" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_m"
+                    android:layout_weight="1"
+                    android:text="@string/bmi_obese"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_legend" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_s"
+                    android:text="@string/range_obese"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_legend" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

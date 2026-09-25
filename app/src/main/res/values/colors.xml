@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Base palette -->
+    <color name="bg_screen">#F2F7F6</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="primary">#0F6E75</color>
+    <color name="primary_dark">#0A4F55</color>
+    <color name="primary_soft">#DCEFF0</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="ripple_on_primary">#33FFFFFF</color>
+
+    <!-- Text -->
+    <color name="text_primary">#16262C</color>
+    <color name="text_secondary">#4F616B</color>
+    <color name="text_hint">#6B7B86</color>
+
+    <!-- Lines / fields -->
+    <color name="stroke_card">#E0E9EB</color>
+    <color name="stroke_input">#B9C7CD</color>
+    <color name="input_bg">#F6F9FA</color>
+    <color name="divider">#D6E0E3</color>
+    <color name="chip_bg">#FFFFFF</color>
+
+    <!-- BMI risk level: text/accent colours (all readable on white) -->
+    <color name="risk_underweight">#1565C0</color>
+    <color name="risk_normal">#2E7D32</color>
+    <color name="risk_overweight">#B45309</color>
+    <color name="risk_obese">#C62828</color>
+
+    <!-- BMI risk level: soft tints (optional, for backgrounds) -->
+    <color name="risk_underweight_bg">#E3F0FD</color>
+    <color name="risk_normal_bg">#E3F4E5</color>
+    <color name="risk_overweight_bg">#FFEFD9</color>
+    <color name="risk_obese_bg">#FCE4E4</color>
 </resources>

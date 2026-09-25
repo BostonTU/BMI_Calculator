@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Field container. Highlights when the EditText inside it has focus
+     (needs android:addStatesFromChildren="true" on the container). -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/surface" />
+            <corners android:radius="@dimen/corner_input" />
+            <stroke
+                android:width="@dimen/stroke_thick"
+                android:color="@color/primary" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/input_bg" />
+            <corners android:radius="@dimen/corner_input" />
+            <stroke
+                android:width="@dimen/stroke_thin"
+                android:color="@color/stroke_input" />
+        </shape>
+    </item>
+</selector>

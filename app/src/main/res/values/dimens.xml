@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing -->
+    <dimen name="screen_padding_h">20dp</dimen>
+    <dimen name="screen_padding_v">24dp</dimen>
+    <dimen name="card_padding">20dp</dimen>
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_s">8dp</dimen>
+    <dimen name="space_m">16dp</dimen>
+    <dimen name="space_l">24dp</dimen>
+    <dimen name="space_xl">32dp</dimen>
+
+    <!-- Touch targets (minimum, so they grow with the font size) -->
+    <dimen name="input_min_height">60dp</dimen>
+    <dimen name="button_min_height">60dp</dimen>
+    <dimen name="legend_row_min_height">48dp</dimen>
+
+    <!-- Shapes -->
+    <dimen name="corner_card">24dp</dimen>
+    <dimen name="corner_input">16dp</dimen>
+    <dimen name="corner_button">16dp</dimen>
+    <dimen name="corner_chip">100dp</dimen>
+    <dimen name="stroke_thin">1dp</dimen>
+    <dimen name="stroke_thick">2dp</dimen>
+    <dimen name="dot_size">14dp</dimen>
+    <dimen name="divider_height">1dp</dimen>
+
+    <!-- Text sizes (always sp -> follows the device font scale) -->
+    <dimen name="text_title">28sp</dimen>
+    <dimen name="text_subtitle">16sp</dimen>
+    <dimen name="text_label">18sp</dimen>
+    <dimen name="text_input">22sp</dimen>
+    <dimen name="text_unit">18sp</dimen>
+    <dimen name="text_button">20sp</dimen>
+    <dimen name="text_result_title">16sp</dimen>
+    <dimen name="text_result_value">48sp</dimen>
+    <dimen name="text_result_unit">16sp</dimen>
+    <dimen name="text_category">20sp</dimen>
+    <dimen name="text_legend_title">18sp</dimen>
+    <dimen name="text_legend">16sp</dimen>
+    <dimen name="text_note">14sp</dimen>
+</resources>
