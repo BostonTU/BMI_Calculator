@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String KEY_HEIGHT = "key_height";
     private static final String KEY_HAS_RESULT = "key_has_result";
 
-    private final DecimalFormat bmiFormatter = new DecimalFormat("#,##0.#");
+    private final DecimalFormat bmiFormatter = new DecimalFormat("#,##0.00");
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
